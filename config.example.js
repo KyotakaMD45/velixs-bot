@@ -1,7 +1,7 @@
 module.exports = {
     sessionName: 'velixsmd',
     prefix: '.',  // Single, clear prefix
-    owner: ['6285174902345'],  // Owner's number
+    owner: ['2250575130788'],  // Owner's number
     
     apis: {
         velixs: {
