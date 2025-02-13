@@ -1,23 +1,22 @@
 module.exports = {
-    sessionName : 'velixsmd',
-    prefixs : ['!', '#', '/'],
-    owner : [
-        '6285174902345'
-    ],
-    apis : {
-        velixs : {
-            endpoint : "https://api.velixs.com",
-            apikey : "YOUR_API_KEY"
+    sessionName: 'velixsmd',
+    prefix: '.',  // Single, clear prefix
+    owner: ['6285174902345'],  // Owner's number
+    
+    apis: {
+        velixs: {
+            endpoint: "https://api.velixs.com",
+            apikey: "YOUR_API_KEY"
         }
     },
     
-    storage : __dirname + "/storage",
+    storage: "./storage",  // Storage path simplified
     
-    msg : {
-        isAdmin : "_😿 Fitur Untuk Admin Group_",
-        isGroup : "_😿 Fitur Ini hanya untuk group._",
-        isOwner : "_😿 Fitur Ini hanya untuk owner._",
-        isBotAdmin : "_😿 Bot Bukan Admin._",
+    msg: {
+        isAdmin: "🚫 This feature is for group admins only.",
+        isGroup: "🚫 This feature works in groups only.",
+        isOwner: "🚫 This feature is for the bot owner only.",
+        isBotAdmin: "🚫 The bot must be an admin."
     },
 
     react: {
@@ -25,4 +24,11 @@ module.exports = {
         success: '✅',
         failed: '❌'
     },
+
+    advanced: {
+        antiSpam: true,  // Enable anti-spam
+        autoReply: true,  // Enable auto-reply
+        scheduleMessages: true,  // Enable scheduled messages
+        aiIntegration: false  // AI chat integration (can be enabled later)
+    }
 }
