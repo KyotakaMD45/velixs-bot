@@ -7,8 +7,8 @@ let config;
 try {
     config = require('./config.js');
 } catch {
-    log.error('config.js not found!') 
-    process.exit(1)
+    log.error('config.js not found!');
+    process.exit(1);
 }
 
 app.get('/', (req, res) => {
@@ -20,7 +20,7 @@ app.listen(port, () => {
 });
 
 // Import the bot logic
-const startBot = require('./app/baileys/velixs.js');
+const { startBot } = require('./app/baileys/velixs.js'); // Ensure it's correctly destructured
 
 // Start the bot and send a notification to the owner
 startBot().then(async (sock) => {
@@ -31,4 +31,6 @@ startBot().then(async (sock) => {
     } catch (err) {
         console.error('❌ Failed to send startup message to the owner:', err);
     }
+}).catch((err) => {
+    console.error('❌ Error starting the bot:', err);
 });
